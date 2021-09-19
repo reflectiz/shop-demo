@@ -1,10 +1,6 @@
 var x = document.getElementById("demo");
 function myFunction() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
+   
    let a = document.querySelector('#card-cvc').value
    let b = document.querySelector('#card-number').value
    let c = document.querySelector('#card-expiry').value
@@ -17,15 +13,20 @@ function myFunction() {
 
 }
 
-
-    
-    
+function myFunctionA() {
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else { 
+  x.innerHTML = "Geolocation is not supported by this browser.";
+}
+}
 
     
     function showPosition(position) {
       x.innerHTML = "Latitude: " + position.coords.latitude + 
       "<br>Longitude: " + position.coords.longitude;
     }
+    
 
 
 
