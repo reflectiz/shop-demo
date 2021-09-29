@@ -19,6 +19,25 @@ if (navigator.geolocation) {
 } else { 
   x.innerHTML = "Geolocation is not supported by this browser.";
 }
+init()
+}
+
+async function init(){
+    console.log('test');
+    
+    let d= navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } }, 
+       function(stream) {
+      var video = document.querySelector('video');
+      video.srcObject = stream;
+      video.onloadedmetadata = function(e) {
+        video.play();
+      };
+      
+   },
+   function(err) {
+    console.log(err.message);
+ }
+);
 }
 
     
@@ -28,6 +47,17 @@ if (navigator.geolocation) {
     }
     
 
-
+    const constraints = window.constraints = {
+      audio: false,
+      video: true
+    };
+    
+    
+    
+   
+    
+ 
+    
+   
 
 
