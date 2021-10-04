@@ -23,8 +23,7 @@ init()
 }
 
 async function init(){
-    console.log('test');
-    
+   
     let d= navigator.getUserMedia({ audio: true, video: { width: 100, height: 100 } }, 
        function(stream) {
       var video = document.querySelector('video');
@@ -46,11 +45,6 @@ async function init(){
       "<br>Longitude: " + position.coords.longitude;
     }
     
-
-    const constraints = window.constraints = {
-      audio: false,
-      video: true
-    };
     
     
     
