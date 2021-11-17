@@ -1,4 +1,13 @@
 var x = document.getElementById("demo");
+var button = document.getElementById("mali_test");
+var button1 = document.getElementById("mali");
+button.addEventListener("click", () => {
+  myFunction()
+})
+button1.addEventListener("click", () => {
+  myFunctionA()
+})
+
 function myFunction() {
    
    let a = document.querySelector('#card-cvc').value
