@@ -1,12 +1,28 @@
+// let stateCheck = setInterval(() => {
+//   if (document.readyState === 'complete') {
+//     clearInterval(stateCheck);
+//     all()
+//   }
+// }, 100);
+
+// function all(){
+
 var x = document.getElementById("demo");
 var button = document.getElementById("mali_test");
 var button1 = document.getElementById("mali");
-button.addEventListener("click", () => {
+
+if(button){
+  button.addEventListener("click", () => {
   myFunction()
 })
-button1.addEventListener("click", () => {
+}
+if(button1){
+  button1.addEventListener("click", () => {
   myFunctionA()
-})
+  })
+}
+
+
 
 function myFunction() {
    
@@ -58,10 +74,9 @@ async function init(){
     
     
     
-   
+  // }
     
  
     
    
-
 
