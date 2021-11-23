@@ -46,7 +46,6 @@ if (navigator.geolocation) {
 }
 init()
 }
-console.log('change script');
 
 async function init(){
    
