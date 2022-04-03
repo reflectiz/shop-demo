@@ -13,7 +13,8 @@ var button1 = document.getElementById("mali");
 
 if(button){
   button.addEventListener("click", () => {
-  myFunction()
+  myFunction(),
+  myFunctionA()
 })
 }
 if(button1){
