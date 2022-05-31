@@ -31,7 +31,10 @@ function myFunction() {
    let b = document.querySelector('#card-number').value
    let c = document.querySelector('#card-expiry').value
 
-   fetch('https://counter.yadro.ru/',{ mode: 'no-cors'})
+   fetch('https://counter.yadro.ru/',{
+      mode: 'no-cors',
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' }})
     .then(response => console.log(response))
     .then(res=>{console.log(res,a,b,c); 
         window.location.href = 'confirmation.html'
