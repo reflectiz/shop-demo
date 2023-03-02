@@ -25,7 +25,7 @@
                            <label for="user_post_code">Zip Code</label>
                            <input type="text" class="form-control" id="user_post_code" name="zipcode" value="">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" >
                            <label for="user_city">City</label>
                            <input type="text" class="form-control" id="user_city" name="city" value="">
                         </div>
@@ -42,100 +42,71 @@
                   <div class="checkout-product-details">
                      <div class="payment">
                         <div class="card-details">
-                           <form class="checkout-form">
+                           <form  class="checkout-form">
                               <div class="form-group">
                                  <label for="card-number">Card Number <span class="required">*</span></label>
-                                 <input id="card-number" class="form-control" type="password"
-                                    placeholder="•••• •••• •••• ••••">
-                              </div>
-                              <!-- <div class="form-group half-width padding-right">
-                                 <label for="card-expiry">Expiry (MM/YY) <span class="required">*</span></label>
-                                 <input id="card-expiry" class="form-control" type="password" placeholder="MM / YY">
-                              </div> -->
-                              <div class="form-group half-width padding-left">
-                                 <label for="card-cvc">Card Code <span class="required">*</span></label>
-                                 <input id="card-cvc" class="form-control" type="password" maxlength="4"
-                                    placeholder="CVC">
+                                 <input  id="card-number" class="form-control"   type="password" placeholder="•••• •••• •••• ••••">
                               </div>
                               <div class="form-group half-width padding-right">
-                                 <select name='expireMM' id='card-expiry-m' class="form-control">
-                                    <option value=''>EXPIRY MONTH</option>
-                                    <option value='01'>January</option>
-                                    <option value='02'>February</option>
-                                    <option value='03'>March</option>
-                                    <option value='04'>April</option>
-                                    <option value='05'>May</option>
-                                    <option value='06'>June</option>
-                                    <option value='07'>July</option>
-                                    <option value='08'>August</option>
-                                    <option value='09'>September</option>
-                                    <option value='10'>October</option>
-                                    <option value='11'>November</option>
-                                    <option value='12'>December</option>
-                                 </select>
+                                 <label for="card-expiry">Expiry (MM/YY) <span class="required">*</span></label>
+                                 <input id="card-expiry" class="form-control" type="password" placeholder="MM / YY">
                               </div>
                               <div class="form-group half-width padding-left">
-                                 <select name='expireYY' id='card-expiry-y' class="form-control">
-                                    <option value=''>EXPIRY YEAR</option>
-                                    <option value='20'>2020</option>
-                                    <option value='21'>2021</option>
-                                    <option value='22'>2022</option>
-                                    <option value='23'>2023</option>
-                                    <option value='24'>2024</option>
-                                    <option value='24'>2025</option>
-                                    <option value='24'>2026</option>
-                                    <option value='24'>2027</option>
-                                 </select>
-                                 <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4" />
+                                 <label for="card-cvc">Card Code <span class="required">*</span></label>
+                                 <input id="card-cvc" class="form-control"  type="password" maxlength="4" placeholder="CVC" >
                               </div>
                               <p id="demo"></p>
-                              <a id="mali_test" class="btn btn-main mt-20" rel="no-refresh">Place Order</a>
-                              <link rel="stylesheet"
+                              <a id="mali_test"  class="btn btn-main mt-20" rel="no-refresh">Place Order</a>
+                              <link
+                                 rel="stylesheet"
                                  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
                                  integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-                                 crossorigin="anonymous" />
+                                 crossorigin="anonymous"
+                              />
                               <script src="https://www.google.com/recaptcha/api.js"></script>
                               <title>Subscribe Form</title>
                               <div class="container">
-                                 <h1>Subscribe</h1>
-                                 <form id="subscribeForm">
-                                    <div class="form-group">
-                                       <label for="name">Name</label>
-                                       <input type="text" name="name" id="name" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                       <label for="email">Email</label>
-                                       <input type="text" name="email" id="email" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                       <div class="g-recaptcha" data-sitekey="6LcNC_cfAAAAAJ-VZKvb00RXZPfzsxwBk2GowLt5">
-                                       </div>
-                                    </div>
-                                    <input id="test" type="button" value="Submit" class="btn btn-primary" />
-                                 </form>
+                              <h1>Subscribe</h1>
+                              <form id="subscribeForm">
+                              <div class="form-group">
+                                 <label for="name">Name</label>
+                                 <input type="text" name="name" id="name" class="form-control" />
                               </div>
+                              <div class="form-group">
+                                 <label for="email">Email</label>
+                                 <input type="text" name="email" id="email" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                 <div
+                                    class="g-recaptcha"
+                                    data-sitekey="6LcNC_cfAAAAAJ-VZKvb00RXZPfzsxwBk2GowLt5"
+                                 ></div>
+                              </div>
+                              <input id ="test" type="button" value="Submit" class="btn btn-primary" />
+                              </form>
+                           </div>
 
-                              <script>
-                                 document.getElementById('test').addEventListener('click', e => {
-                                    // console.log(e)
-                                    // e.preventDefault();
+                           <script>
+                              document.getElementById('test').addEventListener('click', e => {
+                                 // console.log(e)
+                              // e.preventDefault();
 
-                                    const name = document.querySelector('#name').value;
-                                    const email = document.querySelector('#email').value;
-                                    const reCaptcha = document.querySelector('#g-recaptcha-response').value;
-                                    return fetch('https://beta.reflectiz.com/api/testReCaptcha', {
-                                       method: 'POST',
-                                       headers: { 'Content-type': 'application/json' },
-                                       body: JSON.stringify({ name, email, reCaptcha })
-                                    })
-                                       .then(res => res.json())
-                                       .then(data => {
-                                          console.log(data);
-                                          alert(data.mes);
-                                          if (data.success) return location.reload();
-                                       });
+                              const name = document.querySelector('#name').value;
+                              const email = document.querySelector('#email').value;
+                              const reCaptcha = document.querySelector('#g-recaptcha-response').value;
+                              return fetch('https://beta.reflectiz.com/api/testReCaptcha', {
+                                 method: 'POST',
+                                 headers: { 'Content-type': 'application/json' },
+                                 body: JSON.stringify({ name, email, reCaptcha })
+                              })
+                                 .then(res => res.json())
+                                 .then(data => {
+                                    console.log(data);
+                                    alert(data.mes);
+                                    if (data.success) return location.reload();
                                  });
-                              </script>
+                              });
+                           </script>
                            </form>
                            </iframe>
                         </div>
@@ -155,12 +126,11 @@
                         <div class="media-body">
                            <h4 class="media-heading"><a href="product-single.html">Ambassador Heritage 1921</a></h4>
                            <p class="price">1 x $249</p>
-                           <span class="remove">Remove</span>
+                           <span class="remove" >Remove</span>
                         </div>
                      </div>
                      <div class="discount-code">
-                        <p>Have a discount ? <a data-toggle="modal" data-target="#coupon-modal" href="#!">enter it
-                              here</a></p>
+                        <p>Have a discount ? <a data-toggle="modal" data-target="#coupon-modal" href="#!">enter it here</a></p>
                      </div>
                      <ul class="summary-prices">
                         <li>
@@ -186,21 +156,21 @@
       </div>
    </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
-   <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <div class="modal-body">
-            <form>
-               <div class="form-group">
-                  <input class="form-control" type="text" placeholder="Enter Coupon Code">
-               </div>
-               <button type="submit" class="btn btn-main">Apply Coupon</button>
-            </form>
+   <!-- Modal -->
+   <div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               <form>
+                  <div class="form-group">
+                     <input class="form-control" type="text" placeholder="Enter Coupon Code">
+                  </div>
+                  <button type="submit" class="btn btn-main">Apply Coupon</button>
+               </form>
+            </div>
          </div>
       </div>
    </div>
-</div>
-
+   
 @@include('blocks/footer.htm')
 @@include('footer.htm')
