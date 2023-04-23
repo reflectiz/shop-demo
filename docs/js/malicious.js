@@ -16,7 +16,31 @@ if(button1){
   })
 }
 
+function showAlert(type, message) {
+  var alertBox = document.getElementById("customAlert");
+  var alertBox = document.getElementById("alertBox");
+  var alertHeader = document.getElementById("alertHeader");
+  var alertBody = document.getElementById("alertBody");
 
+  customAlert.style.display = "block";
+
+  if (type == "success") {
+    alertHeader.innerHTML = "Success!";
+    alertBox.style.border = "1px solid #4CAF50";
+    alertHeader.style.color = "#4CAF50";
+  } else if (type == "error") {
+    alertHeader.innerHTML = "Error!";
+    alertBox.style.border = "1px solid #f44336";
+    alertHeader.style.color = "#f44336";
+  }
+
+  alertBody.innerHTML = message;
+}
+
+function hideAlert() {
+  var customAlert = document.getElementById("customAlert");
+  customAlert.style.display = "none";
+}
 
 function myFunction() {
    
