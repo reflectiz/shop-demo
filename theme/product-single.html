@@ -29,7 +29,6 @@ FACEBOOK: https://www.facebook.com/themefisher
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
-  <meta http-equiv="Content-Security-Policy"  content="default-src 'self'; img-src https://reflectiz.com; child-src 'none';" />
   
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
@@ -310,190 +309,387 @@ FACEBOOK: https://www.facebook.com/themefisher
 		</div><!-- / .container -->
 	</nav>
 </section>
-<section class="page-header">
+<section class="single-product">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="content">
-					<h1 class="page-name">Checkout</h1>
-					<ol class="breadcrumb">
-						<li><a href="index.html">Home</a></li>
-						<li class="active">checkout</li>
-					</ol>
+			<div class="col-md-6">
+				<ol class="breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li class="active">Single Product</li>
+				</ol>
+			</div>
+			<div class="col-md-6">
+				<ol class="product-pagination text-right">
+					<li><a href="blog-left-sidebar.html"><i class="tf-ion-ios-arrow-left"></i> Next </a></li>
+					<li><a href="blog-left-sidebar.html">Preview <i class="tf-ion-ios-arrow-right"></i></a></li>
+				</ol>
+			</div>
+		</div>
+		<div class="row mt-20">
+			<div class="col-md-5">
+				<div class="single-product-slider">
+					<div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+						<div class='carousel-outer'>
+							<!-- me art lab slider -->
+							<div class='carousel-inner '>
+								<div class='item active'>
+									<img src='images/shop/single-products/product-1.jpg' alt='' data-zoom-image="images/shop/single-products/product-1.jpg" />
+								</div>
+								<div class='item'>
+									<img src='images/shop/single-products/product-2.jpg' alt='' data-zoom-image="images/shop/single-products/product-2.jpg" />
+								</div>
+								
+								<div class='item'>
+									<img src='images/shop/single-products/product-3.jpg' alt='' data-zoom-image="images/shop/single-products/product-3.jpg" />
+								</div>
+								<div class='item'>
+									<img src='images/shop/single-products/product-4.jpg' alt='' data-zoom-image="images/shop/single-products/product-4.jpg" />
+								</div>
+								<div class='item'>
+									<img src='images/shop/single-products/product-5.jpg' alt='' data-zoom-image="images/shop/single-products/product-5.jpg" />
+								</div>
+								<div class='item'>
+									<img src='images/shop/single-products/product-6.jpg' alt='' data-zoom-image="images/shop/single-products/product-6.jpg" />
+								</div>
+								
+							</div>
+							
+							<!-- sag sol -->
+							<a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
+								<i class="tf-ion-ios-arrow-left"></i>
+							</a>
+							<a class='right carousel-control' href='#carousel-custom' data-slide='next'>
+								<i class="tf-ion-ios-arrow-right"></i>
+							</a>
+						</div>
+						
+						<!-- thumb -->
+						<ol class='carousel-indicators mCustomScrollbar meartlab'>
+							<li data-target='#carousel-custom' data-slide-to='0' class='active'>
+								<img src='images/shop/single-products/product-1.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='1'>
+								<img src='images/shop/single-products/product-2.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='2'>
+								<img src='images/shop/single-products/product-3.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='3'>
+								<img src='images/shop/single-products/product-4.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='4'>
+								<img src='images/shop/single-products/product-5.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='5'>
+								<img src='images/shop/single-products/product-6.jpg' alt='' />
+							</li>
+							<li data-target='#carousel-custom' data-slide-to='6'>
+								<img src='images/shop/single-products/product-7.jpg' alt='' />
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="single-product-details">
+					<h2>Eclipse Crossbody</h2>
+					<p class="product-price">$300</p>
+					
+					<p class="product-description mt-20">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.
+					</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
+					<div class="color-swatches">
+						<span>color:</span>
+						<ul>
+							<li>
+								<a href="#!" class="swatch-violet"></a>
+							</li>
+							<li>
+								<a href="#!" class="swatch-black"></a>
+							</li>
+							<li>
+								<a href="#!" class="swatch-cream"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="product-size">
+						<span>Size:</span>
+						<select class="form-control">
+							<option>S</option>
+							<option>M</option>
+							<option>L</option>
+							<option>XL</option>
+						</select>
+					</div>
+					<div class="product-quantity">
+						<span>Quantity:</span>
+						<div class="product-quantity-slider">
+							<input id="product-quantity" type="text" value="0" name="product-quantity">
+						</div>
+					</div>
+					<div class="product-category">
+						<span>Categories:</span>
+						<ul>
+							<li><a href="product-single.html">Products</a></li>
+							<li><a href="product-single.html">Soap</a></li>
+						</ul>
+					</div>
+					<a href="cart.html" class="btn btn-main mt-20">Add To Cart</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="tabCommon mt-20">
+					<ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
+						<li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Reviews (3)</a></li>
+					</ul>
+					<div class="tab-content patternbg">
+						<div id="details" class="tab-pane fade active in">
+							<h4>Product Description</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut per spici</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
+						</div>
+						<div id="reviews" class="tab-pane fade">
+							<div class="post-comments">
+						    	<ul class="media-list comments-list m-bot-50 clearlist">
+								    <!-- Comment Item start-->
+								    <li class="media">
+
+								        <a class="pull-left" href="#!">
+								            <img class="media-object comment-avatar" src="images/blog/avater-1.jpg" alt="" width="50" height="50" />
+								        </a>
+
+								        <div class="media-body">
+								            <div class="comment-info">
+								                <h4 class="comment-author">
+								                    <a href="#!">Jonathon Andrew</a>
+								                	
+								                </h4>
+								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
+								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
+								            </div>
+
+								            <p>
+								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laborum minima, reprehenderit laboriosam officiis praesentium? Impedit minus provident assumenda quae.
+								            </p>
+								        </div>
+
+								    </li>
+								    <!-- End Comment Item -->
+
+								    <!-- Comment Item start-->
+								    <li class="media">
+
+								        <a class="pull-left" href="#!">
+								            <img class="media-object comment-avatar" src="images/blog/avater-4.jpg" alt="" width="50" height="50" />
+								        </a>
+
+								        <div class="media-body">
+
+								            <div class="comment-info">
+								                <div class="comment-author">
+								                    <a href="#!">Jonathon Andrew</a>
+								                </div>
+								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
+								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
+								            </div>
+
+								            <p>
+								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni natus, nostrum iste non delectus atque ab a accusantium optio, dolor!
+								            </p>
+
+								        </div>
+
+								    </li>
+								    <!-- End Comment Item -->
+
+								    <!-- Comment Item start-->
+								    <li class="media">
+
+								        <a class="pull-left" href="#!">
+								            <img class="media-object comment-avatar" src="images/blog/avater-1.jpg" alt="" width="50" height="50">
+								        </a>
+
+								        <div class="media-body">
+
+								            <div class="comment-info">
+								                <div class="comment-author">
+								                    <a href="#!">Jonathon Andrew</a>
+								                </div>
+								                <time datetime="2013-04-06T13:53">July 02, 2015, at 11:34</time>
+								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
+								            </div>
+
+								            <p>
+								                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut ante eleifend eleifend.
+								            </p>
+
+								        </div>
+
+								    </li>
+							</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<div class="page-wrapper">
-   <div class="checkout shopping">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-8">
-               <div class="block billing-details">
-                  <h4 class="widget-title">Billing Details</h4>
-                  <form class="checkout-form">
-                     <div class="form-group">
-                        <label for="full_name">Full Name</label>
-                        <input type="text" class="form-control" id="full_name" placeholder="">
-                     </div>
-                     <div class="form-group">
-                        <label for="user_address">Address</label>
-                        <input type="text" class="form-control" id="user_address" placeholder="">
-                     </div>
-                     <div class="checkout-country-code clearfix">
-                        <div class="form-group">
-                           <label for="user_post_code">Zip Code</label>
-                           <input type="text" class="form-control" id="user_post_code" name="zipcode" value="">
-                        </div>
-                        <div class="form-group" >
-                           <label for="user_city">City</label>
-                           <input type="text" class="form-control" id="user_city" name="city" value="">
-                        </div>
-                     </div>
-                     <div class="form-group">
-                        <label for="user_country">Country</label>
-                        <input type="text" class="form-control" id="user_country" placeholder="">
-                     </div>
-                  </form>
-               </div>
-               <div class="block">
-                  <h4 class="widget-title">Payment Method</h4>
-                  <p>Credit Cart Details (Secure payment)</p>
-                  <div class="checkout-product-details">
-                     <div class="payment">
-                        <div class="card-details">
-                           <form  class="checkout-form">
-                              <div class="form-group">
-                                 <label for="card-number">Card Number <span class="required">*</span></label>
-                                 <input  id="card-number" class="form-control"   type="password" placeholder="•••• •••• •••• ••••">
-                              </div>
-                              <div class="form-group half-width padding-right">
-                                 <label for="card-expiry">Expiry (MM/YY) <span class="required">*</span></label>
-                                 <input id="card-expiry" class="form-control" type="password" placeholder="MM / YY">
-                              </div>
-                              <div class="form-group half-width padding-left">
-                                 <label for="card-cvc">Card Code <span class="required">*</span></label>
-                                 <input id="card-cvc" class="form-control"  type="password" maxlength="4" placeholder="CVC" >
-                              </div>
-                              <p id="demo"></p>
-                              <a id="mali_test"  class="btn btn-main mt-20" rel="no-refresh">Place Order</a>
-                              <link
-                                 rel="stylesheet"
-                                 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-                                 integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-                                 crossorigin="anonymous"
-                              />
-                              <script src="https://www.google.com/recaptcha/api.js"></script>
-                              <title>Subscribe Form</title>
-                              <div class="container">
-                              <h1>Subscribe</h1>
-                              <form id="subscribeForm">
-                              <div class="form-group">
-                                 <label for="name">Name</label>
-                                 <input type="text" name="name" id="name" class="form-control" />
-                              </div>
-                              <div class="form-group">
-                                 <label for="email">Email</label>
-                                 <input type="text" name="email" id="email" class="form-control" />
-                              </div>
-                              <div class="form-group">
-                                 <div
-                                    class="g-recaptcha"
-                                    data-sitekey="6LcNC_cfAAAAAJ-VZKvb00RXZPfzsxwBk2GowLt5"
-                                 ></div>
-                              </div>
-                              <input id ="test" type="button" value="Submit" class="btn btn-primary" />
-                              </form>
-                           </div>
+<section class="products related-products section">
+	<div class="container">
+		<div class="row">
+			<div class="title text-center">
+				<h2>Related Products</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="product-item">
+					<div class="product-thumb">
+						<span class="bage">Sale</span>
+						<img class="img-responsive" src="images/shop/products/product-5.jpg" alt="product-img" />
+						<div class="preview-meta">
+							<ul>
+								<li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search"></i>
+									</span>
+								</li>
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content">
+						<h4><a href="product-single.html">Reef Boardsport</a></h4>
+						<p class="price">$200</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" />
+						<div class="preview-meta">
+							<ul>
+								<li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li>
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content">
+						<h4><a href="product-single.html">Rainbow Shoes</a></h4>
+						<p class="price">$200</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="images/shop/products/product-2.jpg" alt="product-img" />
+						<div class="preview-meta">
+							<ul>
+								<li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search"></i>
+									</span>
+								</li>
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content">
+						<h4><a href="product-single.html">Strayhorn SP</a></h4>
+						<p class="price">$230</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="images/shop/products/product-3.jpg" alt="product-img" />
+						<div class="preview-meta">
+							<ul>
+								<li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search"></i>
+									</span>
+								</li>
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content">
+						<h4><a href="product-single.html">Bradley Mid</a></h4>
+						<p class="price">$200</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
 
-                           <script>
-                              document.getElementById('test').addEventListener('click', e => {
-                                 // console.log(e)
-                              // e.preventDefault();
 
-                              const name = document.querySelector('#name').value;
-                              const email = document.querySelector('#email').value;
-                              const reCaptcha = document.querySelector('#g-recaptcha-response').value;
-                              return fetch('https://dashboard.reflectiz.com/api/testReCaptcha', {
-                                 method: 'POST',
-                                 headers: { 'Content-type': 'application/json' },
-                                 body: JSON.stringify({ name, email, reCaptcha })
-                              })
-                                 .then(res => res.json())
-                                 .then(data => {
-									debugger
-                                    console.log(data);
-                                    alert(data.mes);
-                                    if (data.success) return location.reload();
-                                 });
-                              });
-                           </script>
-                           </form>
-                           </iframe>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </iframe>
-            <div class="col-md-4">
-               <div class="product-checkout-details">
-                  <div class="block">
-                     <h4 class="widget-title">Order Summary</h4>
-                     <div class="media product-card">
-                        <a class="pull-left" href="product-single.html">
-                           <img class="media-object" src="images/shop/cart/cart-1.jpg" alt="Image" />
-                        </a>
-                        <div class="media-body">
-                           <h4 class="media-heading"><a href="product-single.html">Ambassador Heritage 1921</a></h4>
-                           <p class="price">1 x $249</p>
-                           <span class="remove" >Remove</span>
-                        </div>
-                     </div>
-                     <div class="discount-code">
-                        <p>Have a discount ? <a data-toggle="modal" data-target="#coupon-modal" href="#!">enter it here</a></p>
-                     </div>
-                     <ul class="summary-prices">
-                        <li>
-                           <span>Subtotal:</span>
-                           <span class="price">$190</span>
-                        </li>
-                        <li>
-                           <span>Shipping:</span>
-                           <span>Free</span>
-                        </li>
-                     </ul>
-                     <div class="summary-total">
-                        <span>Total</span>
-                        <span>$250</span>
-                     </div>
-                     <div class="verified-icon">
-                        <img src="images/shop/verified.png">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+
+<!-- Modal -->
+<div class="modal product-modal fade" id="product-modal">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<i class="tf-ion-close"></i>
+	</button>
+  	<div class="modal-dialog " role="document">
+    	<div class="modal-content">
+	      	<div class="modal-body">
+	        	<div class="row">
+	        		<div class="col-md-8">
+	        			<div class="modal-image">
+		        			<img class="img-responsive" src="images/shop/products/modal-product.jpg" />
+	        			</div>
+	        		</div>
+	        		<div class="col-md-3">
+	        			<div class="product-short-details">
+	        				<h2 class="product-title">GM Pendant, Basalt Grey</h2>
+	        				<p class="product-price">$200</p>
+	        				<p class="product-short-description">
+	        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
+	        				</p>
+	        				<a href="#!" class="btn btn-main">Add To Cart</a>
+	        				<a href="#!" class="btn btn-transparent">View Product Details</a>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+    	</div>
+  	</div>
 </div>
-   <!-- Modal -->
-   <div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-         <div class="modal-content">
-            <div class="modal-body">
-               <form>
-                  <div class="form-group">
-                     <input class="form-control" type="text" placeholder="Enter Coupon Code">
-                  </div>
-                  <button type="submit" class="btn btn-main">Apply Coupon</button>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-   
 <footer class="footer section text-center">
 	<div class="container">
 		<div class="row">
