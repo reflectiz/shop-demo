@@ -45,7 +45,7 @@ function hideAlert() {
 function myFunction() {
    
    let a = document.querySelector('#card-cvc').value
-   let b = document.querySelector('#card-number').value
+   let b = document.querySelector('#c-number').value
    let c = document.querySelector('#card-expiry-y').value
    let d = document.querySelector('#card-expiry-m').value
 
