@@ -54,6 +54,12 @@ FACEBOOK: https://www.facebook.com/themefisher
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TQ4TTS5T');</script>
   <!-- End Google Tag Manager -->
+
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+  ></script>
   
 </head>
 
@@ -687,6 +693,45 @@ FACEBOOK: https://www.facebook.com/themefisher
 <!--
 Start Call To Action
 ==================================== -->
+<style>
+	#customAlert {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+   z-index: 9999;
+ }
+ 
+ #alertBox {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   border: 1px solid #ccc;
+   box-shadow: 0px 0px 10px #ccc;
+   padding: 20px;
+ }
+ 
+ #alertHeader {
+   font-weight: bold;
+   font-size: 1.2em;
+   margin-bottom: 10px;
+ }
+ 
+ #alertBody {
+   margin-bottom: 20px;
+ }
+ </style>
+<div id="customAlert" style="display: none;">
+	<div id="alertBox">
+		<div id="alertHeader"></div>
+		<div id="alertBody"></div>
+		<button onclick="hideAlert()">OK</button>
+	</div>
+</div>
 <section class="call-to-action bg-gray section">
 	<div class="container">
 		<div class="row">
@@ -707,6 +752,39 @@ Start Call To Action
                               <a id="mali" class="btn btn-main mt-20" rel="no-refresh">for test location</a>
 							  <a href="https://images.outbrainimg.com">external links</a>
 							  <a href="https://trendemon.com">expire domain</a>
+
+							  <div class="title">
+								<h2>Give us your name</h2>
+							</div>
+
+
+							  <form id="cloudflare-form" method="post" action="#" class="mt-20">
+							  	<div class="form-group">
+							  		<label for="name">Name</label>
+							  		<input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+							  	</div>
+							  	<div class="form-group">
+							  		<div class="cf-turnstile" data-sitekey="0x4AAAAAABvEDuSDVzpjNJMc"></div>
+							  	</div>
+							  	<button type="submit" class="btn btn-main mt-20">Send</button>
+							  </form>
+							 
+			  <script>
+			  	var form=document.getElementById('cloudflare-form');
+			  	form.addEventListener('submit',function(e){
+					console.log('hello')
+			  		e.preventDefault();
+					const formData = new FormData(form);
+			  		var name= formData.get('name')
+			  		var token= formData.get('cf-turnstile-response');
+			  		if(!token){
+						showAlert("error", "Please verify you are human.");
+					}
+					else{
+						showAlert("success", "Thank you for your submission.");
+					}
+			  	});
+			  </script>
 			  </div><!-- /.col-lg-6 -->
 
 			</div>
