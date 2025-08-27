@@ -85,6 +85,9 @@ Start Call To Action
 					const formData = new FormData(form);
 			  		var name= formData.get('name')
 			  		var token= formData.get('cf-turnstile-response');
+
+					console.log(name, token);
+
 			  		if(!token){
 						showAlert("error", "Please verify you are human.");
 					}
