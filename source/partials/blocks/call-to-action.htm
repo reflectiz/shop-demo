@@ -62,7 +62,7 @@ Start Call To Action
 							  <a href="https://trendemon.com">expire domain</a>
 
 							  <div class="title">
-								<h2>Give us your name</h2>
+								<h2>Give us your name Turnstile</h2>
 							</div>
 
 
@@ -86,16 +86,72 @@ Start Call To Action
 			  		var name= formData.get('name')
 			  		var token= formData.get('cf-turnstile-response');
 
-					console.log(name, token);
-
-			  		if(!token){
+					if(!token){
 						showAlert("error", "Please verify you are human.");
 					}
-					else{
-						showAlert("success", "Thank you for your submission.");
-					}
+					return fetch('https://beta.reflectiz.com/api/testTurnstile', {
+						method: 'POST',
+						headers: { 'Content-type': 'application/json' },
+						body: JSON.stringify({ 'cf-turnstile-response': token })
+					})
+						.then(res => res.json())
+						.then(data => {
+							if (data.success) {
+						showAlert("success", "It seems you are human.");
+						}
+					else {
+						showAlert("error", `Please verify you are human.`)
+					}});
 			  	});
 			  </script>
+
+
+			<div class="title">
+				<h2>Give us your name hcaptcha</h2>
+			</div>
+
+
+			<form id="hcaptcha-form" method="post" action="#" class="mt-20">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+				</div>
+				<div class="form-group">
+					<div class="h-captcha" data-sitekey="8674e24a-6e46-4a8a-81da-2bd88e7eaf78"></div>
+				</div>
+				<button type="submit" class="btn btn-main mt-20">Send</button>
+			</form>
+
+			<script>
+				var form=document.getElementById('hcaptcha-form');
+				form.addEventListener('submit',function(e){
+				e.preventDefault();
+				const formData = new FormData(form);
+				var name= formData.get('name')
+				var token= formData.get('h-captcha-response');
+				console.log(token)
+				if(!token){
+					showAlert("error", "Please verify you are human.");
+				}
+				//   return 
+				//   	fetch('https://beta.reflectiz.com/api/testHCaptcha', {
+				// 	  method: 'POST',
+				// 	  headers: { 'Content-type': 'application/json' },
+				// 	  body: JSON.stringify({ 'h-captcha-response': token })
+				//   	})
+				// 	.then(res => res.json())
+				// 	.then(data => {
+				// 		if (data.success) {
+				// 			showAlert("success", "It seems you are human.");
+				// 		}
+				// 		else {
+				// 			showAlert("error", `Please verify you are human.`)
+				// 		}
+				// 	});
+				});
+			</script>
+
+
 			  </div><!-- /.col-lg-6 -->
 
 			</div>

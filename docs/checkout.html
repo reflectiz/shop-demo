@@ -60,6 +60,17 @@ FACEBOOK: https://www.facebook.com/themefisher
     async
     defer
   ></script>
+
+
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lff7rUrAAAAAHWWL6L5LI-SJdyzrGGksAqbIocZ"></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<!-- OneTrust Cookies Consent Notice start for www.safesafe.net -->
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="019b74c6-61b3-7dde-bb19-f7026d4df3e8" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for www.safesafe.net -->
   
 </head>
 
@@ -489,7 +500,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                                        <input type="text" name="email" id="email" class="form-control" />
                                     </div>
                                     <div class="form-group">
-                                       <div class="g-recaptcha" data-sitekey="6LcNC_cfAAAAAJ-VZKvb00RXZPfzsxwBk2GowLt5">
+                                       <div class="g-recaptcha" data-sitekey="6LcKIrYrAAAAAII6PDc3SN-lpJgWEuKJk6QWpJkC">
                                        </div>
                                     </div>
                                     <input id="test" type="button" value="Submit" class="btn btn-primary" />
@@ -521,6 +532,50 @@ FACEBOOK: https://www.facebook.com/themefisher
                                  });
                               </script>
                               
+
+                              <div class="container">
+                                 <h1>Subscribe Form Recaptcha V3</h1>
+                                 <form id="subscribeForm">
+                                    <div class="form-group">
+                                       <label for="name">Name</label>
+                                       <input type="text" name="name" id="name" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="email">Email</label>
+                                       <input type="text" name="email" id="email" class="form-control" />
+                                    </div>
+                                    <input id="test-v3" type="button" value="Submit" class="btn btn-primary" />
+                                 </form>
+                              </div>
+
+                              <script>
+                                 document.getElementById('test-v3').addEventListener('click', e => {
+                                    e.preventDefault();
+                                    const name = document.querySelector('#name').value;
+                                    const email = document.querySelector('#email').value;
+                                    const action = 'FORM';
+                                    grecaptcha.enterprise.ready(async () => {
+                                       const token = await grecaptcha.enterprise.execute('6Lff7rUrAAAAAHWWL6L5LI-SJdyzrGGksAqbIocZ', {action: action});
+                                       console.log(token);
+                                       return fetch('https://beta.reflectiz.com/api/testReCaptchaV3', {
+                                          method: 'POST',
+                                          headers: { 'Content-type': 'application/json' },
+                                          body: JSON.stringify({ name, email, reCaptcha: token, action })
+                                       })
+                                       .then(res => res.json())
+                                       .then(data => {
+                                          if (data.success) {
+                                             showAlert("success", "It seems you are human.");
+                                          }
+                                          else {
+                                             showAlert("error", `It looks like you are a robot.`)
+                                          }
+                                       });
+                                    });                                    
+                                 });
+                              </script>
+
+
                            </iframe>
                         </div>
                      </div>
