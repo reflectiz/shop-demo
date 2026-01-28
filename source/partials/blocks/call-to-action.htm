@@ -155,9 +155,18 @@ Start Call To Action
 			<div id="ot-sdk-cookie-policy"></div>
 
 			<script>
-				setTimeout(() => {
-					OneTrust.initializeCookiePolicyHtml()
-				}, 5000);
+				// Initialize after page load
+				document.addEventListener(
+					'DOMContentLoaded',
+					function() {
+						OneTrust.initializeCookiePolicyHtml();
+				});
+
+				// For SPAs - re-initialize with handler replacement
+				function loadCookiePolicyPage() {
+					document.getElementById('content').innerHTML ='<div id="ot-sdk-cookie-policy"></div>';
+					OneTrust.initializeCookiePolicyHtml(true);
+				}
 			</script>
 
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=AdtnXz3qEdTbD9AO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
